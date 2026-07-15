@@ -54,8 +54,8 @@ module neural_network_digits #(
         assign last_i_n = layer ? (N_OUT-1) : (N_HID-1);
 
     // Calculo de la direccion de bias y peso de la neurona actual con offset por Layer 1 o 2
-        assign b_addr = layer ? (5'h10 + i_n)              : i_n;
-        assign w_addr = layer ? (11'h100 + i_n*16 + i_i)  : (i_n*64 + i_i);
+        assign b_addr = layer ? (5'd16 + i_n)              : i_n;
+        assign w_addr = layer ? (11'd1024 + i_n*16 + i_i)  : (i_n*64 + i_i);
 
     // Valores de 0..7 en x/y (fila/columna dentro de la imagen 8x8)
         assign x = i_i[2:0];   // columna

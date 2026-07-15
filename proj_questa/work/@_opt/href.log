@@ -1,0 +1,14 @@
+BEGIN 1:neural_network_digits:fast:work
+    x :  1:neural_network_digits_tb:fast:work
+    w_addr :  1:neural_network_digits_tb:fast:work
+    image :  1:neural_network_digits_tb:fast:work
+    weight_rom :  1:neural_network_digits_tb:fast:work
+    layer :  1:neural_network_digits_tb:fast:work
+    n_oculta :  1:neural_network_digits_tb:fast:work
+    i_i :  1:neural_network_digits_tb:fast:work
+    sum :  1:neural_network_digits_tb:fast:work
+    y :  1:neural_network_digits_tb:fast:work
+    state :  1:neural_network_digits_tb:fast:work
+    prod :  1:neural_network_digits_tb:fast:work
+    i_n :  1:neural_network_digits_tb:fast:work
+END 
