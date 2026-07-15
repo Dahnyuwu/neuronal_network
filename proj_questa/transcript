@@ -1,0 +1,119 @@
+# do run.do
+# 
+# if {[file exists work]} {
+# vdel -lib work -all
+# }
+# 
+# vlib work
+# vmap work work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# 
+# Compilación
+# vlog -sv ../src/*.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:03:30 on Jul 14,2026
+# vlog -sv ../src/neural_network_digits.sv ../src/neural_network_digits_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module neural_network_digits
+# ** Warning: ../src/neural_network_digits.sv(22): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module neural_network_digits_tb
+# 
+# Top level modules:
+# 	neural_network_digits_tb
+# End time: 19:03:30 on Jul 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# Simulación
+# vsim -voptargs=+acc work.neural_network_digits_tb
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.neural_network_digits_tb 
+# Start time: 19:03:31 on Jul 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Warning: ../src/neural_network_digits.sv(22): (vopt-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Note: (vopt-143) Recognized 1 FSM in module "neural_network_digits(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.neural_network_digits_tb(fast)
+# Loading work.neural_network_digits(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (4) for port 'digit'. The port definition is at: ../src/neural_network_digits.sv(24).
+#    Time: 0 ps  Iteration: 0  Instance: /neural_network_digits_tb/dut File: ../src/neural_network_digits_tb.sv Line: 34
+# 
+# Corre toda la simulación
+# run -all
+# img  0: pass  digit=3 label=9 (1238 cycles)
+# img  1: pass  digit=4 label=4 (1238 cycles)
+# img  2: pass  digit=6 label=6 (1238 cycles)
+# img  3: pass  digit=4 label=4 (1238 cycles)
+# img  4: pass  digit=8 label=8 (1238 cycles)
+# img  5: pass  digit=4 label=4 (1238 cycles)
+# img  6: pass  digit=5 label=9 (1238 cycles)
+# img  7: pass  digit=9 label=9 (1238 cycles)
+# img  8: pass  digit=2 label=2 (1238 cycles)
+# img  9: pass  digit=8 label=8 (1238 cycles)
+# img 10: pass  digit=7 label=7 (1238 cycles)
+# img 11: pass  digit=8 label=8 (1238 cycles)
+# img 12: pass  digit=8 label=8 (1238 cycles)
+# img 13: pass  digit=7 label=7 (1238 cycles)
+# img 14: pass  digit=8 label=8 (1238 cycles)
+# img 15: pass  digit=6 label=6 (1238 cycles)
+# img 16: pass  digit=1 label=1 (1238 cycles)
+# img 17: pass  digit=0 label=0 (1238 cycles)
+# img 18: pass  digit=1 label=1 (1238 cycles)
+# img 19: pass  digit=7 label=7 (1238 cycles)
+# img 20: pass  digit=7 label=7 (1238 cycles)
+# img 21: pass  digit=0 label=0 (1238 cycles)
+# img 22: pass  digit=9 label=5 (1238 cycles)
+# img 23: pass  digit=4 label=4 (1238 cycles)
+# img 24: pass  digit=5 label=5 (1238 cycles)
+# img 25: pass  digit=9 label=9 (1238 cycles)
+# img 26: pass  digit=2 label=2 (1238 cycles)
+# img 27: pass  digit=3 label=3 (1238 cycles)
+# img 28: pass  digit=2 label=2 (1238 cycles)
+# img 29: pass  digit=2 label=2 (1238 cycles)
+# img 30: pass  digit=5 label=5 (1238 cycles)
+# img 31: pass  digit=9 label=9 (1238 cycles)
+# img 32: pass  digit=8 label=8 (1238 cycles)
+# img 33: pass  digit=0 label=0 (1238 cycles)
+# img 34: pass  digit=1 label=1 (1238 cycles)
+# img 35: pass  digit=1 label=1 (1238 cycles)
+# img 36: pass  digit=4 label=4 (1238 cycles)
+# img 37: pass  digit=2 label=2 (1238 cycles)
+# img 38: pass  digit=8 label=8 (1238 cycles)
+# img 39: pass  digit=1 label=1 (1238 cycles)
+# img 40: pass  digit=6 label=6 (1238 cycles)
+# img 41: pass  digit=0 label=0 (1238 cycles)
+# img 42: pass  digit=0 label=0 (1238 cycles)
+# img 43: pass  digit=4 label=4 (1238 cycles)
+# img 44: pass  digit=7 label=7 (1238 cycles)
+# img 45: pass  digit=4 label=4 (1238 cycles)
+# img 46: pass  digit=2 label=2 (1238 cycles)
+# img 47: pass  digit=4 label=4 (1238 cycles)
+# img 48: pass  digit=4 label=4 (1238 cycles)
+# img 49: pass  digit=7 label=7 (1238 cycles)
+# --------------------------------------------------------
+# golden matches : 50/50 (must be 50)
+# label accuracy : 47/50 (expected 47/50)
+# TEST PASSED
+# ** Note: $finish    : ../src/neural_network_digits_tb.sv(113)
+#    Time: 620525 ns  Iteration: 1  Instance: /neural_network_digits_tb
+# End time: 19:03:34 on Jul 14,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 3
