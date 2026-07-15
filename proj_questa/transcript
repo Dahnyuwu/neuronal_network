@@ -14,27 +14,30 @@
 # Compilación
 # vlog -sv ../src/*.sv
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:03:30 on Jul 14,2026
-# vlog -sv ../src/neural_network_digits.sv ../src/neural_network_digits_tb.sv 
+# Start time: 22:03:55 on Jul 14,2026
+# vlog -sv ../src/neural_network_digits.sv ../src/neural_network_digits_tb.sv ../src/nnd.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module neural_network_digits
-# ** Warning: ../src/neural_network_digits.sv(22): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: ../src/neural_network_digits.sv(12): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # -- Compiling module neural_network_digits_tb
+# -- Compiling module neural_network_digits
+# ** Warning: ../src/nnd.sv(1): (vlog-2275) Existing module 'neural_network_digits' at ../src/neural_network_digits.sv(1) will be overwritten.
+# ** Warning: ../src/nnd.sv(12): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # 
 # Top level modules:
 # 	neural_network_digits_tb
-# End time: 19:03:30 on Jul 14,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
+# End time: 22:03:55 on Jul 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
 # 
 # Simulación
 # vsim -voptargs=+acc work.neural_network_digits_tb
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.neural_network_digits_tb 
-# Start time: 19:03:31 on Jul 14,2026
+# Start time: 22:03:55 on Jul 14,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
-# ** Warning: ../src/neural_network_digits.sv(22): (vopt-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# ** Warning: ../src/nnd.sv(12): (vopt-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
 # ** Note: (vopt-143) Recognized 1 FSM in module "neural_network_digits(fast)".
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
 # //  Questa Altera Starter FPGA Edition-64
@@ -54,7 +57,7 @@
 # Loading sv_std.std
 # Loading work.neural_network_digits_tb(fast)
 # Loading work.neural_network_digits(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (4) for port 'digit'. The port definition is at: ../src/neural_network_digits.sv(24).
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (4) for port 'digit'. The port definition is at: ../src/nnd.sv(16).
 #    Time: 0 ps  Iteration: 0  Instance: /neural_network_digits_tb/dut File: ../src/neural_network_digits_tb.sv Line: 34
 # 
 # Corre toda la simulación
@@ -115,5 +118,5 @@
 # TEST PASSED
 # ** Note: $finish    : ../src/neural_network_digits_tb.sv(113)
 #    Time: 620525 ns  Iteration: 1  Instance: /neural_network_digits_tb
-# End time: 19:03:34 on Jul 14,2026, Elapsed time: 0:00:03
+# End time: 22:03:59 on Jul 14,2026, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 3
