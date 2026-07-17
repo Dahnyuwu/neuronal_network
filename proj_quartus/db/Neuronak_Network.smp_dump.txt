@@ -1,0 +1,8 @@
+
+State Machine - |neural_network_digits|state
+Name state.L2 state.L1 state.BIAS state.IDDLE state.DONE 
+state.IDDLE 0 0 0 0 0 
+state.BIAS 0 0 1 1 0 
+state.L1 0 1 0 1 0 
+state.L2 1 0 0 1 0 
+state.DONE 0 0 0 1 1 

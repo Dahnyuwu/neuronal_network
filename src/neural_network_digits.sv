@@ -1,8 +1,8 @@
 module neural_network_digits #(
     // Parameters
         parameter int IMAGE_PIXEL_WIDTH     = 4,
-        parameter int IMAGE_HORIZONTAL_SIZE = 8,
-        parameter int IMAGE_VERTICAL_SIZE   = 8,
+        parameter int IMAGE_HORIZONTAL_SIZE = 7,
+        parameter int IMAGE_VERTICAL_SIZE   = 7,
         parameter int DIGIT_WIDTH           = 5
 )(
     // Inputs
@@ -65,7 +65,23 @@ module neural_network_digits #(
         assign n_select = layer ? n_oculta[i_i[3:0]] : {4'b0, image[y][x]};
 
     // Producto en funcion de indices y neuronas xd
-        assign prod = weight_rom[w_addr] * $signed({1'b0, n_select});
+        //assign prod = weight_rom[w_addr] * $signed({1'b0, n_select});
+
+    // FMA
+logic signed [31:0] fma_;
+
+fma_3 #(
+    .SRC1_WIDTH(8),
+    .SRC2_WIDTH(9),
+    .SRC3_WIDTH(32)
+) fmaxd (
+    .srca(weight_rom[w_addr]),
+    .srcb($signed({1'b0,n_select})),
+    .srcc(sum),
+    .is_fma(1'b1),
+    .is_signed(1'b1),
+    .result(fma_)
+);
 
     // Estados FSM
         localparam [2:0] IDDLE = 3'h0;
@@ -110,7 +126,7 @@ module neural_network_digits #(
 
                 // Calculo de neuronas
                 L1: begin
-                    sum <= sum + prod;
+                    sum <= fma_;
                     if (i_i >= last_i_i) begin
                         state <= L2;
                     end

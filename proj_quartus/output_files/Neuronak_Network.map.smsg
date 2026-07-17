@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at neural_network_digits.sv(96): always construct contains both blocking and non-blocking assignments File: C:/Escuela/Neuronak_Network/src/neural_network_digits.sv Line: 96
+Info (10281): Verilog HDL Declaration information at neural_network_digits.sv(15): object "done" differs only in case from object "DONE" in the same scope File: C:/Escuela/Neuronak_Network/src/neural_network_digits.sv Line: 15
