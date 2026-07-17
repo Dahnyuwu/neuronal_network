@@ -1,8 +1,8 @@
 module neural_network_digits #(
     // Parameters
         parameter int IMAGE_PIXEL_WIDTH     = 4,
-        parameter int IMAGE_HORIZONTAL_SIZE = 7,
-        parameter int IMAGE_VERTICAL_SIZE   = 7,
+        parameter int IMAGE_HORIZONTAL_SIZE = 8,
+        parameter int IMAGE_VERTICAL_SIZE   = 8,
         parameter int DIGIT_WIDTH           = 5
 )(
     // Inputs
