@@ -1,0 +1,43 @@
+Reading pref.tcl
+
+# 2025.2
+
+# do run.do
+# 
+# if {[file exists work]} {
+# vdel -lib work -all
+# }
+# 
+# vlib work
+# vmap work work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# 
+# Compilación
+# vlog -sv ../src/*.sv
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:34:51 on Jul 16,2026
+# vlog -sv ../src/fma_3.sv ../src/neural_network_digits.sv ../src/neural_network_digits_tb.sv ../src/temp.sv ../src/wrapper.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module fma_3
+# ** Error: ../src/fma_3.sv(15): (vlog-2730) Undefined variable: 'RESULT_WIDTH'.
+# ** Error (suppressible): ../src/fma_3.sv(16): (vlog-2388) 'result' already declared in this scope (fma_3) at ../src/fma_3.sv(15).
+# ** Error: ../src/fma_3.sv(17): (vlog-13282) 'RESULT_WIDTH' already declared in this scope.
+# ** Error: ../src/fma_3.sv(15): (vlog-13294) Identifier must be declared with a port mode: result.
+# -- Compiling module neural_network_digits
+# ** Warning: ../src/neural_network_digits.sv(12): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module neural_network_digits_tb
+# -- Compiling module neural_network_digits
+# ** Warning: ../src/temp.sv(1): (vlog-2275) Existing module 'neural_network_digits' at ../src/neural_network_digits.sv(1) will be overwritten.
+# ** Warning: ../src/temp.sv(12): (vlog-13314) Defaulting port 'image' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# -- Compiling module wrapper
+# End time: 19:34:52 on Jul 16,2026, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 3
+# ** Error: C:/altera/25.1std/questa_fse/win64/vlog failed.
+# Error in macro ./run.do line 11
+# C:/altera/25.1std/questa_fse/win64/vlog failed.
+#     while executing
+# "vlog -sv ../src/*.sv"
+Questa> quit

@@ -1,0 +1,101 @@
+// Descripcion: Top level del clasificador de digitos con red neuronal para implementacion en FPGA y analisis de timing
+
+module fpga_top
+    import neural_network_digits::*;
+(
+  input  logic                     clk,
+  input  logic                     rst_in,
+  input  logic                     start_in,
+  input  t_pixel [NUM_PIXELS-1:0]  image_in,
+  output logic                     done_out,
+  output logic   [DIGIT_WIDTH-1:0] digit_out
+);
+
+  // Flopped FPGA inputs signals
+  // FF.D
+  logic                    rst_d;
+  logic                    start_d;
+  t_pixel [NUM_PIXELS-1:0] image_d;
+  // FF.Q
+  logic                    rst_q;
+  logic                    start_q;
+  t_pixel [NUM_PIXELS-1:0] image_q;
+
+  // Flopped FPGA outputs signals
+  // FF.D
+  logic                   done_d;
+  logic [DIGIT_WIDTH-1:0] digit_d;
+  // FF.Q
+  logic                   done_q;
+  logic [DIGIT_WIDTH-1:0] digit_q;
+
+  // Neural network instance signals
+  logic                         rst;
+  logic                         start;
+  logic [IMAGE_PIXEL_WIDTH-1:0] image [IMAGE_HORIZONTAL_SIZE-1:0][IMAGE_VERTICAL_SIZE-1:0];
+  logic                         done;
+  logic [DIGIT_WIDTH-1:0]       digit;
+
+  //////////////////////////////////////////////////////////////////////////////////////
+  // Instantiate neural_network_digits
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  neural_network_digits neural_network_digits (
+    .clk  (clk  ),
+    .rst  (rst  ),
+    .start(start),
+    .image(image),
+    .done (done ),
+    .digit(digit)
+  );
+
+  defparam neural_network_digits.weights_rom.ROM_FILE = "../../design/neural_network/weights.hex";
+  defparam neural_network_digits.biases_rom.ROM_FILE  = "../../design/neural_network/biases.hex";
+
+  //////////////////////////////////////////////////////////////////////////////////////
+  // Connect flopped neural_network_digits instance signals
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  // Flopped FPGA inputs to neural_network_digits instance inputs
+  assign rst   = rst_q;
+  assign start = start_q;
+//assign image = image_q;
+  always_comb begin
+    for (int row = 0; row < IMAGE_VERTICAL_SIZE; row++) begin
+      for (int col = 0; col < IMAGE_HORIZONTAL_SIZE; col++) begin
+        image[row][col] = image_q[row*IMAGE_HORIZONTAL_SIZE + col];
+      end
+    end
+  end
+
+  // Flopped neural_network_digits instance outputs to FPGA outputs
+  assign done_out  = done_q;
+  assign digit_out = digit_q;
+
+  //////////////////////////////////////////////////////////////////////////////////////
+  // Flop FPGA ports
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  // Connect FPGA inputs to FF.D
+  assign rst_d   = rst_in;
+  assign start_d = start_in;
+  assign image_d = image_in;
+
+  // Connect neural_network_digits instance outputs to FF.D
+  assign done_d  = done;
+  assign digit_d = digit;
+
+  // Flop FPGA inputs
+  always_ff @(posedge clk) begin
+    rst_q   <= rst_d;
+    start_q <= start_d;
+    image_q <= image_d;
+  end
+
+  // Flop neural_network_digits instance outputs
+  always_ff @(posedge clk) begin
+    done_q  <= done_d;
+    digit_q <= digit_d;
+  end
+
+endmodule

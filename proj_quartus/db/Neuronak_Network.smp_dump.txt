@@ -1,5 +1,5 @@
 
-State Machine - |neural_network_digits|state
+State Machine - |fpga_top|neural_network_digits:uut|state
 Name state.L2 state.L1 state.BIAS state.IDDLE state.DONE 
 state.IDDLE 0 0 0 0 0 
 state.BIAS 0 0 1 1 0 

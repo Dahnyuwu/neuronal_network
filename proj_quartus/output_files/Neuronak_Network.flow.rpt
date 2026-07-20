@@ -1,5 +1,5 @@
 Flow report for Neuronak_Network
-Thu Jul 16 16:20:27 2026
+Thu Jul 16 20:54:31 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -41,16 +41,16 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Thu Jul 16 16:20:17 2026           ;
+; Flow Status                     ; Successful - Thu Jul 16 20:54:22 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; Neuronak_Network                                ;
-; Top-level Entity Name           ; neural_network_digits                           ;
+; Top-level Entity Name           ; fpga_top                                        ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CGXFC7C7F23C8                                  ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 541 / 56,480 ( < 1 % )                          ;
-; Total registers                 ; 129                                             ;
-; Total pins                      ; 205 / 268 ( 76 % )                              ;
+; Logic utilization (in ALMs)     ; 553 / 56,480 ( < 1 % )                          ;
+; Total registers                 ; 404                                             ;
+; Total pins                      ; 14 / 268 ( 5 % )                                ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 128 / 7,024,640 ( < 1 % )                       ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                                 ;
@@ -68,28 +68,28 @@ on the Quartus Prime software download page.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 07/16/2026 16:18:44 ;
+; Start date & time ; 07/16/2026 20:53:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Neuronak_Network    ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                     ;
-+-------------------------------------+----------------------------------------+------------------+-----------------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name           ; Section Id ;
-+-------------------------------------+----------------------------------------+------------------+-----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 136537552601427.178424032407708        ; --               ; --                    ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --                    ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --                    ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; neural_network_digits ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; neural_network_digits ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; neural_network_digits ; Top        ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --                    ; --         ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --                    ; --         ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --                    ; --         ;
-; TOP_LEVEL_ENTITY                    ; neural_network_digits                  ; Neuronak_Network ; --                    ; --         ;
-+-------------------------------------+----------------------------------------+------------------+-----------------------+------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 136537552601427.178425678719344        ; --               ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; fpga_top    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; fpga_top    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; fpga_top    ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; fpga_top                               ; Neuronak_Network ; --          ; --         ;
++-------------------------------------+----------------------------------------+------------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -97,11 +97,11 @@ on the Quartus Prime software download page.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4857 MB             ; 00:00:21                           ;
-; Fitter               ; 00:01:02     ; 1.1                     ; 6917 MB             ; 00:02:15                           ;
-; Assembler            ; 00:00:14     ; 1.0                     ; 5367 MB             ; 00:00:11                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.6                     ; 5424 MB             ; 00:00:12                           ;
-; Total                ; 00:01:37     ; --                      ; --                  ; 00:02:59                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4873 MB             ; 00:00:21                           ;
+; Fitter               ; 00:00:53     ; 1.1                     ; 6901 MB             ; 00:02:00                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 5367 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:08     ; 1.5                     ; 5408 MB             ; 00:00:10                           ;
+; Total                ; 00:01:19     ; --                      ; --                  ; 00:02:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

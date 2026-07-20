@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Jul 16 16:18:57 2026
+Analysis & Synthesis Status : Successful - Thu Jul 16 20:53:19 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 Revision Name : Neuronak_Network
-Top-level Entity Name : neural_network_digits
+Top-level Entity Name : fpga_top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 107
-Total pins : 205
+Total registers : 374
+Total pins : 14
 Total virtual pins : 0
 Total block memory bits : 128
 Total DSP Blocks : 0

@@ -14,10 +14,10 @@ Z1 dC:/Escuela/Neuronak_Network/proj_questa
 T_opt
 !i145 1
 !i144 0
-!s110 1784240133
-V1g>eR@V=X60JU6QS[Lf7k2
+!s110 1784252223
+VPf101iVTfLNe[`SLh8^6l3
 04 24 4 work neural_network_digits_tb fast 0
-=1-44e517c92f75-6a595804-30a-4cb8
+=1-44e517c92f75-6a59873d-253-37f4
 R0
 !s12f OEM100
 !s12b OEM100
@@ -30,13 +30,13 @@ OL;O;2025.2;82
 vfma_3
 Z2 2../src/fma_3.sv|../src/neural_network_digits.sv|../src/neural_network_digits_tb.sv|../src/temp.sv|../src/wrapper.sv
 Z3 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
-Z4 !s110 1784240132
+Z4 !s110 1784252219
 !i10b 1
 !s100 H@@0LII7[j2g>zPjW]GkT1
 Ia_0@XO=i7NZJBkRTZl4;c1
 S1
 R1
-w1784239946
+w1784252144
 8../src/fma_3.sv
 F../src/fma_3.sv
 !i122 0
@@ -46,7 +46,7 @@ Z6 OL;L;2025.2;82
 r1
 !s85 0
 31
-Z7 !s108 1784240132.000000
+Z7 !s108 1784252219.000000
 Z8 !s107 ../src/wrapper.sv|../src/temp.sv|../src/neural_network_digits_tb.sv|../src/neural_network_digits.sv|../src/fma_3.sv|
 Z9 !s90 -sv|../src/fma_3.sv|../src/neural_network_digits.sv|../src/neural_network_digits_tb.sv|../src/temp.sv|../src/wrapper.sv|
 !i113 0
@@ -77,41 +77,16 @@ R9
 !i113 0
 R10
 R11
-vneural_network_digits_
-R2
-R3
-R4
-!i10b 1
-!s100 Q6bSDU?KeS7zgEV4[Y_Ni0
-IHXS>OZ0iO0REc9AV^SS5<3
-S1
-R1
-w1784239160
-8../src/neural_network_digits.sv
-F../src/neural_network_digits.sv
-!i122 0
-L0 1 170
-R5
-R6
-r1
-!s85 0
-31
-R7
-R8
-R9
-!i113 0
-R10
-R11
 vneural_network_digits_tb
 R2
 R3
 R4
 !i10b 1
-!s100 ClT7O?SZg?lUz@8RnO;C23
-I=4CSGngGcY_CYN1ZR;L^h3
+!s100 A7e6kRV^Lk>kJkf=dDTGa3
+I6YhXFV`DmmCMFR9i9kIKJ0
 S1
 R1
-w1784090035
+w1784252157
 8../src/neural_network_digits_tb.sv
 F../src/neural_network_digits_tb.sv
 !i122 0

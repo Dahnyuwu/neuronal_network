@@ -81,27 +81,27 @@ module neural_network_digits_tb;
   //============================================================
   // DEBUG PRIMERA CAPA
   //============================================================
-  always @(posedge clk) begin
+  // always @(posedge clk) begin
 
-    if (!rst &&
-        dut.state == dut.L1 &&
-        dut.layer == 1'b0) begin
+  //   if (!rst &&
+  //       dut.state == dut.L1 &&
+  //       dut.layer == 1'b0) begin
 
-      $display(
-        "[%0t] L1  neuron=%0d  pixel=%0d  xy=(%0d,%0d) input=%0d weight=%0d prod=%0d sum=%0d",
-        $time,
-        dut.i_n,
-        dut.i_i,
-        dut.x,
-        dut.y,
-        dut.image[dut.y][dut.x],
-        dut.weight_rom[dut.w_addr],
-        dut.prod,
-        dut.sum
-      );
-    end
+  //     $display(
+  //       "[%0t] L1  neuron=%0d  pixel=%0d  xy=(%0d,%0d) input=%0d weight=%0d prod=%0d sum=%0d",
+  //       $time,
+  //       dut.i_n,
+  //       dut.i_i,
+  //       dut.x,
+  //       dut.y,
+  //       dut.image[dut.y][dut.x],
+  //       dut.weight_rom[dut.w_addr],
+  //       dut.prod,
+  //       dut.sum
+  //     );
+  //   end
 
-  end
+  // end
 
   //============================================================
   // DEBUG CAPA OCULTA
